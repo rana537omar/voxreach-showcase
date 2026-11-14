@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VoxReach (AI Cold-Calling Voice Agent Platform)</title>
+<meta name="description" content="AI voice agents that call your leads, qualify them and book meetings, with every call transcribed and every calling rule enforced.">
+<meta property="og:title" content="VoxReach (AI Cold-Calling Voice Agent Platform)">
+<meta property="og:description" content="AI voice agents that call your leads, qualify them and book meetings.">
+<meta property="og:image" content="https://rana537omar.github.io/voxreach-showcase/media/banner.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="media/icon.svg">
+<style>
+:root { --bg: #0a1715; --panel: #10231f; --line: #1f3b35; --ink: #eaf5f2; --muted: #9db8b2; --brand: #14b8a6; --mint: #5eead4; --wa: #25d366; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font: 16px/1.6 "Segoe UI", system-ui, -apple-system, Roboto, sans-serif; color: var(--ink); background: var(--bg); }
+a { color: var(--mint); }
+img, video { max-width: 100%; display: block; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+header { position: sticky; top: 0; z-index: 20; background: rgba(10, 23, 21, .88); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+header .wrap { display: flex; align-items: center; gap: 14px; height: 62px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; color: #fff; text-decoration: none; }
+.brand img { width: 30px; height: 30px; }
+.brand small { font-weight: 500; font-size: 13px; color: var(--mint); }
+nav { margin-left: auto; display: flex; gap: 20px; align-items: center; }
+nav a { color: var(--muted); text-decoration: none; font-size: 14.5px; font-weight: 500; }
+nav a:hover { color: #fff; }
+.btn { display: inline-flex; align-items: center; gap: 9px; background: var(--wa); color: #06301a !important; font-weight: 700; padding: 11px 20px; border-radius: 99px; text-decoration: none; }
+.btn.ghost { background: transparent; border: 1px solid var(--line); color: var(--ink) !important; }
+.btn svg { width: 19px; height: 19px; }
+.hero { background: radial-gradient(1100px 620px at 24% 0%, #14665e 0%, #0e2a26 55%, var(--bg) 100%); padding: 74px 0 40px; text-align: center; }
+.hero h1 { font-size: clamp(40px, 7vw, 68px); letter-spacing: -.025em; margin: 0; line-height: 1.05; }
+.hero .type { font-size: clamp(18px, 2.6vw, 25px); color: var(--mint); font-weight: 600; margin: 10px 0 20px; }
+.hero p { max-width: 740px; margin: 0 auto 28px; font-size: 19px; color: #d3e6e2; }
+.cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.shot-hero { margin: 46px auto 0; border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 30px 90px rgba(0, 0, 0, .55); cursor: zoom-in; }
+section { padding: 70px 0; }
+h2 { font-size: clamp(26px, 4vw, 36px); letter-spacing: -.02em; margin: 0 0 8px; text-align: center; }
+.lead { text-align: center; color: var(--muted); max-width: 720px; margin: 0 auto 36px; }
+video { width: 100%; border-radius: 14px; border: 1px solid var(--line); background: #000; box-shadow: 0 24px 70px rgba(0, 0, 0, .5); }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
+.card h3 { margin: 0 0 10px; font-size: 18px; color: #fff; }
+.card ul { margin: 0; padding-left: 18px; color: #c5dad5; font-size: 15px; }
+.card li { margin-bottom: 7px; }
+.card li b { color: #fff; font-weight: 600; }
+.rules { background: linear-gradient(180deg, #0d201d, var(--bg)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.rules .grid { grid-template-columns: repeat(4, 1fr); }
+.rules .card { text-align: center; }
+.rules .n { width: 44px; height: 44px; border-radius: 12px; background: rgba(20, 184, 166, .16); color: var(--mint); display: grid; place-items: center; margin: 0 auto 12px; }
+.rules .n svg { width: 22px; height: 22px; }
+.rules p { margin: 0; color: #c5dad5; font-size: 14.5px; }
+.note { text-align: center; color: var(--muted); font-size: 13.5px; margin-top: 22px; }
+.gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+figure { margin: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+figure img { width: 100%; cursor: zoom-in; }
+figcaption { padding: 11px 15px; font-size: 14.5px; color: #c5dad5; }
+figcaption b { color: #fff; }
+.phones { width: 100%; max-width: 860px; margin: 40px auto 0; }
+.final { text-align: center; background: radial-gradient(900px 420px at 50% 100%, #14665e 0%, var(--bg) 70%); }
+.final .btn { font-size: 19px; padding: 15px 30px; }
+footer { border-top: 1px solid var(--line); padding: 26px 0 40px; color: var(--muted); font-size: 13.5px; text-align: center; }
+#lb { position: fixed; inset: 0; background: rgba(4, 12, 10, .93); display: none; place-items: center; z-index: 50; padding: 20px; cursor: zoom-out; }
+#lb.on { display: grid; }
+#lb img { max-height: 92vh; border-radius: 10px; }
+@media (max-width: 860px) {
+  .grid, .rules .grid { grid-template-columns: 1fr; }
+  .gallery { grid-template-columns: 1fr; }
+  nav a:not(.btn) { display: none; }
+  .brand small { display: none; }
+  .hero { padding-top: 48px; }
+  section { padding: 50px 0; }
+}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="brand" href="#top"><img src="media/icon.svg" alt=""> VoxReach <small>(AI Cold-Calling Voice Agent Platform)</small></a>
+  <nav><a href="#demo">Demo</a><a href="#features">Features</a><a href="#rules">Calling rules</a><a href="#screens">Screenshots</a>
+    <a class="btn" href="https://wa.me/201208562225?text=Hello%2C%20I%20saw%20VoxReach%20(AI%20Cold-Calling%20Voice%20Agent%20Platform)%20and%20I%20would%20like%20to%20get%20the%20full%20system%20and%20the%20source%20code." target="_blank" rel="noopener">WhatsApp</a></nav>
+</div></header>
+
+<div class="hero" id="top"><div class="wrap">
+  <h1>VoxReach</h1>
+  <div class="type">(AI Cold-Calling Voice Agent Platform)</div>
+  <p>AI voice agents that call your leads, qualify them and book meetings. Every call is transcribed, every result is recorded, and the calling rules are enforced on every dial.</p>
+  <div class="cta">
+    <a class="btn" href="https://wa.me/201208562225?text=Hello%2C%20I%20saw%20VoxReach%20(AI%20Cold-Calling%20Voice%20Agent%20Platform)%20and%20I%20would%20like%20to%20get%20the%20full%20system%20and%20the%20source%20code." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.7-5A8.5 8.5 0 1 1 8 19.3z"/></svg>Get the full system &amp; code</a>
+    <a class="btn ghost" href="#demo">Watch the demo</a>
+  </div>
+  <img class="shot-hero zoom" src="media/dashboard.png" alt="VoxReach dashboard: calls placed, connect rate, meetings booked and outcomes" width="1920" height="1080">
+</div></div>
+
+<section id="demo"><div class="wrap">
+  <h2>See it in under three minutes</h2>
+  <p class="lead">Build an agent, rehearse it in the browser, import leads, start the dialer and open a finished call. The campaign runs in simulation mode with fictional leads; no real calls were placed.</p>
+  <video controls preload="none" poster="media/video-poster.png" src="media/VoxReach-demo.mp4"></video>
+</div></section>
+
+<section id="features"><div class="wrap">
+  <h2>From a script to booked meetings</h2>
+  <p class="lead">Everything a sales team or agency needs to run outbound calls with AI, in one place.</p>
+  <div class="grid">
+    <div class="card"><h3>Voice agents</h3><ul>
+      <li><b>Built from your script</b>: goal, pitch, qualifying questions, objection handling and booking rules.</li>
+      <li><b>Rehearse in the browser</b> by microphone or keyboard before any real call.</li>
+      <li><b>Your choice of AI model</b>, in the cloud or on your own server, with a scripted engine built in.</li>
+      <li><b>Hand-off to a person</b> when a prospect asks for one.</li></ul></div>
+    <div class="card"><h3>Campaigns</h3><ul>
+      <li><b>CSV lead import</b> with consent and timezone per lead.</li>
+      <li><b>Pacing controls</b>: calls at once and calls per minute.</li>
+      <li><b>Automatic retries</b> for no answer, busy and voicemail.</li>
+      <li><b>Simulation mode</b> to preview a campaign before paying for calls.</li></ul></div>
+    <div class="card"><h3>Every call on record</h3><ul>
+      <li><b>Transcript, result, summary and sentiment</b> for each call.</li>
+      <li><b>Sales outcomes</b>: meeting booked, interested, call-back, not interested.</li>
+      <li><b>CSV export</b> and a <b>webhook</b> to your CRM.</li>
+      <li><b>Live dashboard</b> of calls, connect rate and meetings.</li></ul></div>
+    <div class="card"><h3>Built for agencies</h3><ul>
+      <li><b>Client workspaces</b> with separate agents, leads, calls and logins.</li>
+      <li><b>Team roles</b>: owners manage settings, members run campaigns.</li></ul></div>
+    <div class="card"><h3>Your own phone number</h3><ul>
+      <li>Live calls go out through <b>your own phone account</b>, so caller ID and call costs stay yours.</li>
+      <li>Choose the <b>language and voice</b> for each agent.</li></ul></div>
+    <div class="card"><h3>Simple to run</h3><ul>
+      <li><b>One small server</b> with its own database.</li>
+      <li>Works on <b>phones and desktops</b>.</li>
+      <li>Passwords hashed, provider keys <b>encrypted at rest</b>.</li></ul></div>
+  </div>
+</div></section>
+
+<section id="rules" class="rules"><div class="wrap">
+  <h2>Calling rules, enforced by the platform</h2>
+  <p class="lead">Responsible calling is built in, not left to the AI model's judgement.</p>
+  <div class="grid">
+    <div class="card"><div class="n"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 8V4M9 14h.01M15 14h.01"/></svg></div><h3>AI disclosure</h3><p>Every call opens by saying it is an AI assistant and who it is calling for. It cannot be switched off.</p></div>
+    <div class="card"><div class="n"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4.5 4.5L19 7"/></svg></div><h3>Consent gate</h3><p>Leads without recorded consent stay in the list but are never dialled.</p></div>
+    <div class="card"><div class="n"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Calling hours</h3><p>Permitted hours and days apply in each lead's own timezone, with a cap on attempts.</p></div>
+    <div class="card"><div class="n"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></div><h3>Do not call</h3><p>Anyone who asks to stop is added to the list automatically and never called again.</p></div>
+  </div>
+  <p class="note">The platform enforces these rules, but the caller remains responsible for following the telemarketing law of the places they call.</p>
+</div></section>
+
+<section id="screens"><div class="wrap">
+  <h2>Screenshots</h2>
+  <p class="lead">Click any image to enlarge it.</p>
+  <div class="gallery">
+    <figure><img class="zoom" loading="lazy" src="media/campaigns.png" alt="Campaign list" width="1920" height="1080"><figcaption><b>Campaigns</b>: status and progress at a glance.</figcaption></figure>
+    <figure><img class="zoom" loading="lazy" src="media/campaign-leads.png" alt="Campaign leads" width="1920" height="1080"><figcaption><b>Leads</b>: consent, status and attempts per lead.</figcaption></figure>
+    <figure><img class="zoom" loading="lazy" src="media/agent-test-call.png" alt="Agent editor with a test call" width="1920" height="1080"><figcaption><b>Agent editor</b>: the script on the left, a test call on the right.</figcaption></figure>
+    <figure><img class="zoom" loading="lazy" src="media/agents.png" alt="Agents" width="1920" height="1080"><figcaption><b>Agents</b>: one for each offer.</figcaption></figure>
+    <figure><img class="zoom" loading="lazy" src="media/call-transcript.png" alt="Call transcript" width="1920" height="1080"><figcaption><b>Transcript</b>: the full conversation with its summary.</figcaption></figure>
+    <figure><img class="zoom" loading="lazy" src="media/calls.png" alt="Calls" width="1920" height="1080"><figcaption><b>Calls</b>: filter by result and export to CSV.</figcaption></figure>
+    <figure><img class="zoom" loading="lazy" src="media/campaign-calls.png" alt="Campaign calls" width="1920" height="1080"><figcaption><b>Campaign calls</b>: results as they arrive.</figcaption></figure>
+    <figure><img class="zoom" loading="lazy" src="media/do-not-call.png" alt="Do-not-call list" width="1920" height="1080"><figcaption><b>Do not call</b>: opt-outs are added automatically.</figcaption></figure>
+    <figure><img class="zoom" loading="lazy" src="media/settings-rules.png" alt="Calling rules" width="1920" height="1080"><figcaption><b>Calling rules</b>: consent, hours, days and attempt limits.</figcaption></figure>
+    <figure><img class="zoom" loading="lazy" src="media/settings-ai.png" alt="AI model settings" width="1920" height="1080"><figcaption><b>AI model</b>: use the model you prefer.</figcaption></figure>
+    <figure><img class="zoom" loading="lazy" src="media/settings-phone.png" alt="Phone settings" width="1920" height="1080"><figcaption><b>Phone</b>: connect your own number for live calls.</figcaption></figure>
+    <figure><img class="zoom" loading="lazy" src="media/clients.png" alt="Client workspaces" width="1920" height="1080"><figcaption><b>Clients</b>: a private workspace for each one.</figcaption></figure>
+  </div>
+  <img class="phones" loading="lazy" src="media/phones.png" alt="The dashboard, a call transcript and a campaign on phones" width="1500" height="980">
+  <p class="note">All names, companies, phone numbers, calls and figures shown are fictional demo data produced in simulation mode. They are not real calls or real results.</p>
+</div></section>
+
+<section class="final"><div class="wrap">
+  <h2>Get the full system</h2>
+  <p class="lead">Want VoxReach for your sales team or agency, a live demo, or the complete source code? Message me on WhatsApp.</p>
+  <a class="btn" href="https://wa.me/201208562225?text=Hello%2C%20I%20saw%20VoxReach%20(AI%20Cold-Calling%20Voice%20Agent%20Platform)%20and%20I%20would%20like%20to%20get%20the%20full%20system%20and%20the%20source%20code." target="_blank" rel="noopener">WhatsApp +20 120 856 2225</a>
+</div></section>
+
+<footer><div class="wrap">Copyright © 2026 Rana Omar. All rights reserved. VoxReach and its source code are proprietary and are not included in this showcase.</div></footer>
+
+<div id="lb"><img alt=""></div>
+<script>
+const lb = document.getElementById('lb');
+document.querySelectorAll('.zoom').forEach((i) => i.addEventListener('click', () => { lb.firstChild.src = i.src; lb.firstChild.alt = i.alt; lb.classList.add('on'); }));
+lb.addEventListener('click', () => lb.classList.remove('on'));
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') lb.classList.remove('on'); });
+</script>
+</body>
+</html>
